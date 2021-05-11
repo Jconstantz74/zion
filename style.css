@@ -24,7 +24,7 @@ body,
 html {
     /* Sets default font-size to 16px, ensuring 1em = 16px; */
     font-size: 16px;
-    font-family: 'Oxygen', sans-serif;
+    background-color: #F7F9FB;
 }
 
 /** RESPONSIVE IMAGES */
@@ -33,45 +33,118 @@ img {
     /* Sets image width to match parent */
     width: 100%;
     display: block;
-    margin: 0 auto;
+}
+
+span {
+    float: left;
+    line-height: 85%;
+    width: .7em;
+    font-size: 400%;
+    font-family: 'Open Sans';
+}
+
+h1 {
+    font-family: 'Playfair Display';
+    color: #687864;
+    font-size: 3em;
+    margin-top: -15px;
+    margin-bottom: -15px;
+}
+
+h2 {
+    font-family: 'Open Sans';
+    color: #5085A5;
+    font-size: 2em;
+    font-weight: 300;
+}
+
+h3 {
+    font-family: serif;
+    font-weight: lighter;
+    font-style: italic;
+    color: #162933;
+    font-size: 16px;
 }
 
 p {
-    line-height: 1.5em;
+    font-family: 'Open Sans';
+    color: #31708E;
+    font-size: 1.5em;
+    text-align: justify;
+    line-height: 1.5;
 }
 
-header {
-    margin-bottom: 16px;
-}
-
-header p {
-    margin: 0;
-}
-
-.collage {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-a:link {
+a {
     text-decoration: none;
-    color: #375971
-}
-
-a:visited {
-    text-decoration: none;
-    color: #375971
+    box-shadow: inset 0 -2px 0 rgba(50, 85, 127, 0.5), 0 2px 0 rgba(50, 85, 127, 0.5);
+    transition: box-shadow .3s;
+    color: inherit;
+    overflow: hidden;
 }
 
 a:hover {
-    text-decoration: none;
-    color: #1e303e
+    box-shadow: inset 0 -30px 0 rgba(50, 85, 127, 0.5), 0 2px 0 rgba(50, 85, 127, 0.5);
 }
 
-.collage .img {
-    flex-basis: 50%;
-    padding: 2.5px;
+.heading h4 {
+    display: inline;
+    font-size: 2.3em;
+    -webkit-text-stroke: 1px #687864;
+    -webkit-text-fill-color: #F7F9FB;
+    font-weight: 800;
+    font-family: "Open Sans";
+}
+
+.footer a {
+    font-family: serif;
+    font-weight: lighter;
+    font-style: italic;
+    color: #162933;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.footer a:hover {
+    opacity: 0.6;
+}
+
+.footer p {
+    font-family: serif;
+    font-weight: lighter;
+    font-style: italic;
+    color: #162933;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.caption {
+    font-family: serif;
+    font-weight: lighter;
+    font-size: 12px;
+    line-height: 10px;
+    color: #162933;
+    margin-top: 0;
+}
+
+.caption a {
+    font-family: serif;
+    font-weight: lighter;
+    font-size: 12px;
+    line-height: 10px;
+    color: #ccc;
+    margin-top: 0;
+    text-decoration: none;
+}
+
+.caption a:hover {
+    opacity: 0.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 10px;
+    margin: 0 auto;
 }
 
 .annotate {
@@ -162,145 +235,44 @@ a:hover {
     left: 80%;
 }
 
-.collage .img:nth-child(odd) {
-    padding-left: 0;
-}
-
-.collage .img:nth-child(even) {
-    padding-right: 0;
-}
-
-/** Caption styles */
-.caption,
-figcaption {
-    font-size: 0.9rem;
-    color: #8e8a8a;
-    padding: 5px 0;
-}
-
-/** BASE CLASSES */
-/** Container styles to keep content from becoming too wide or coming too close to
-* mobile edge */
-.container {
-    margin: 15px;
-}
-
-/** Images are allowed to be a little wider when broken out into their own container */
-.container .map {
-    max-width: 1200px;
-    display: block;
-    margin: 10px auto;
-}
-
-.container.image .caption,
-.container.image figcaption {
-    padding: 5px 10px;
+.text {
+    color: white;
 }
 
 /*********************************************************************
   YOUR TABLET/DESKTOP STYLES GO HERE
 *********************************************************************/
 @media(min-width: 681px) {
+
     /* Any adjustments for tablets and larger go here.
     Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
-}
-
-#javits:not(.active) {
-    top: 44%;
-    left: 45%;
-}
-
-#medgar:not(.active) {
-    bottom: 43%;
-    left: 52%;
-}
-
-#aqueduct:not(.active) {
-    top: 55%;
-    left: 70%;
-}
-
-#york:not(.active) {
-    top: 50%;
-    left: 75%;
-}
-
-#bay:not(.active) {
-    top: 27%;
-    left: 72%;
+    h1 {
+        font-family: 'Playfair Display';
+        color: #687864;
+        font-size: 5.5em;
+    }
 }
 
 /*********************************************************************
   YOUR DESKTOP-ONLY STYLES GO HERE
 *********************************************************************/
 @media(min-width: 769px) {
-
     /* Any adjustments for desktop and larger go here.
     Note these styles will be applied to anything 769px or larger -- so desktop */
-    .container {
-        width: 100%;
-        max-width: 800px;
-        display: block;
-        margin: 10px auto;
-    }
-
-    #javits:not(.active) {
-        top: 43%;
-        left: 45%;
-    }
-
-    #medgar:not(.active) {
-        bottom: 45%;
-        left: 52%;
-    }
-
-    #aqueduct:not(.active) {
-        top: 55%;
-        left: 70%;
-    }
-
-    #york:not(.active) {
-        top: 50%;
-        left: 75%;
-    }
-
-    #bay:not(.active) {
-        top: 28%;
-        left: 72%;
-    }
 }
 
 /*********************************************************************
   YOUR MEDIUM-DESKTOP-ONLY STYLES GO HERE
 *********************************************************************/
 @media(min-width: 805px) {
-
     /* Any adjustments for desktop and larger go here.
     Note these styles will be applied to anything 769px or larger -- so desktop */
-    .container {
-        width: 100%;
-        max-width: 800px;
-        display: block;
-        margin: 10px auto;
-    }
 }
 
 /*********************************************************************
   YOUR LARGE DESKTOP-ONLY STYLES GO HERE
 *********************************************************************/
 @media(min-width: 1205px) {
-
     /* Any adjustments for desktop and larger go here.
     Note these styles will be applied to anything 769px or larger -- so desktop */
-    .container.image .caption,
-    .container.image figcaption {
-        padding: 5px 0;
-    }
-
-    .container {
-        width: 100%;
-        max-width: 800px;
-        display: block;
-        margin: 10px auto;
-    }
 }
